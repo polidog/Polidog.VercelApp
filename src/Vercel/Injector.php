@@ -16,8 +16,8 @@ final class Injector
 
     public static function getInstance(string $context): InjectorInterface
     {
-        $appName = __NAMESPACE__;
-        $appDir = dirname(__DIR__);
+        $appName = 'Polidog\VercelApp';
+        $appDir = dirname(__DIR__, 2);
         $meta = new Meta($appName, $context, $appDir);
 
         $cacheNamespace = str_replace('/', '_', $appDir) . $context;

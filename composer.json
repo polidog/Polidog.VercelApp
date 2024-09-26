@@ -32,7 +32,8 @@
     "scripts": {
         "post-install-cmd": [
             "@setup",
-            "@composer bin all install --ansi"
+            "@composer bin all install --ansi",
+            "@compile"
         ],
         "setup": "php bin/setup.php",
         "compile": "./vendor/bin/bear.compile 'Polidog\\VercelApp' prod-app ./",

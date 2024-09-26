@@ -12,7 +12,7 @@ final class Meta extends AbstractAppMeta
     {
         $this->name = $name;
         $this->appDir = $appDir ?: $this->getAppDir($name);
-        $this->tmpDir = $this->appDir . '/var/tmp/' . $context;
+        $this->tmpDir = $this->appDir . '/api/tmp/' . $context;
         if (! file_exists($this->tmpDir) && ! @mkdir($this->tmpDir, 0755, true) && ! is_dir($this->tmpDir)) {
             throw new NotWritableException($this->tmpDir);
         }
